@@ -1,0 +1,38 @@
+@import "utilities";
+
+header{
+
+    background:$red;
+    color: lavenderblush;
+    padding:15px 35px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.logo{
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: min-content;
+    text-align: center;
+    align-self: center;
+
+
+    
+}
+
+.account{
+    display: flex;
+    
+    &__title,&__logout{
+        padding: 10px;
+        color: lavenderblush;
+    }
+    &__logout{
+        align-self: center;
+        border-left: 1px solid $bordercolor;
+        a{
+            color: lavenderblush;
+        }
+    }
+}

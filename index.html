@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        
+        <div class="logo"><h5>CONTOSO</h5></div>
+        
+        <div class ="account">
+            <div class="account__title">    
+                <a href="#">admin@contoso.com<i class="fa fa-user-circle"></i></a>  
+            </div>
+            <div class="account__logout">
+                <a href="#">Logout</a>  
+                <!-- <a href="#">Log out</a> -->
+            </div>
+        
+        </div>
+    </header>
+    
+    <main>
+        <section class="employee">
+            <section class="title">
+                <h3>Employee Management</h3>
+            </section>
+            
+            <section class= "search_and_add">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" onkeyup="searchFilter()" placeholder="Search...">   
+                </div>
+                <div class="add">
+                <a href=""><i class="fa fa-plus" aria-hidden="true"></i>Add new</a> 
+                </div>
+            </section>
+            
+            
+
+            <section id="employeesection"> 
+            <table id="employee_table">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>State</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+                    </tbody>                            
+                </table>
+            </section>
+
+
+       
+        </section>
+    </main>
+
+    <section id="sidePanel" class="sidepanel"  >
+        <!-- <nav class="slide-in" id="slider"> -->
+            <div class="sidepanel__header"> 
+                <i class="fa fa-forward"  aria-hidden="true" ></i>
+                <h3>Employee Information</h3>
+                <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+            </div>
+            
+            <div class="sidepanel__profile" id="profile-pic">
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="sidepanel__info">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra magna quis massa elementum eleifend.</p>
+                <h4>Address</h4>
+                <p id="view-address"></p>
+                
+            </div>
+
+
+    </section>
+    <section id="modal" >
+        <section class="modal-contents">
+            <section class="title"><h3>Add New Employee</h3></section>
+            
+                
+                    <form action="" name="vform" method="get" id="form1" onsubmit="event.preventDefault();">
+                        <section class="forms">
+                            <div class="forms__details">
+                                
+                                <div class="row">
+                                    <label for="Name">Name</label> 
+                                    <div class='inputs'>    
+                                        <input type="text" id="Name" name="Name" ><br>
+                                        <div class="error" id="nameErr"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="email">Email</label>
+                                    <div class='inputs'>    
+                                        <input type="email" id="email" name="email" ><br>
+                                        <div class="error" id="emailErr"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="phone">Phone</label>
+                                    <div class='inputs'>    
+                                        <input type="tel" id="phone" name="phone"  > <br>
+                                        <div class="error" id="phoneErr"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="address">Address</label>
+                                    <div class='inputs'>    
+                                        <textarea name="address" id="address" rows="5" cols="30"></textarea><br>
+                                        <div class="error" id="addressErr"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="Gender">Gender</label>
+                                    <div class='inputs'>    
+                                        <input class="radio" type="radio" name="gender" value="male">Male  &nbsp;&nbsp;
+                                        <input class="radio" type="radio" name="gender" value="female"> Female <br>
+                                        <div class="error" id="genderErr"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="State">State</label>
+                                    <div class='inputs'>    
+                                        <input class="radio" type="radio" name="state" value="active">Active&nbsp;
+                                        <input class="radio" type="radio" name="state" value="inactive"> Inactive <br>
+                                        <div class="error" id="stateErr"></div>
+                                    </div>
+                                </div>
+    
+                            </div>  
+
+                            <div class="forms__profilepic">
+                                <label for="myfile">Upload Profile Pic</label><br>
+                                <input type="file" id="myfile" name="Browse" >
+                            </div>
+                        </section>
+                        <section class="buttons">
+                            <button class="cancel" form="form1" value="Cancel" >Cancel</button>
+                            <button type="submit" class="save" form="form1" value="Save">Save</button>
+                        </section>
+                    </form>
+            
+                
+          
+           
+        </section>
+    </section>
+
+    <script type="module" src="js/main.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+@import "table";
+@import "utilities";
+
+main{
+    width: 100%;
+    margin: 0 auto;
+}
+.employee{
+    padding: 0 35px;
+}
+
+section{
+    padding: 10px 0px;
+}
+
+.title{
+    border-bottom: 1px solid $bordercolor;
+}
+.search_and_add{
+    display: flex;
+    justify-content: space-between;
+    a,i{
+        color: black;
+    }
+    .search-bar{
+        width: 300px;
+        position: relative;
+        input{
+            width: 100%;
+            padding: 7px;
+            border: 1px solid #180303;
+            background: url(../images/search-1.png);
+            background-repeat: no-repeat;
+            background-size: 15px 15px;
+            background-position: 95% center;
+        }
+    }
+
+}
+
+

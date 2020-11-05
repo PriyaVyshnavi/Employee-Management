@@ -1,0 +1,29 @@
+@import "mainBody";
+@import "header";   
+@import "utilities";
+@import "addDetails";
+@import "sidepanel";
+
+
+*,*:before,*:after {
+	box-sizing: inherit;
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+i{
+    padding: 10px;
+    text-decoration: none;
+    color: lavenderblush;
+}
+a{
+    padding: 10px;
+    text-decoration: none;
+    color: lavenderblush;
+}
+
+
+
